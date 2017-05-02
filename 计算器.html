@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/Calculator.css" rel="stylesheet" type="text/css" />
+	</head>
+	<script type="text/javascript" language="javascript">
+        	
+        	window.onload = function(){
+                function add(obj){
+                  document.getElementById("txt1").value+=obj.value;
+                }
+                function results(){
+                  var obj=document.getElementById("txt1").value;
+                  if(obj.indexOf("=")<0)
+                  document.getElementById("txt1").value+="="+eval(obj);
+                }
+                function clears(){
+                  document.getElementById("txt1").value="";
+                }
+			}
+        </script>
+	<body>
+		<!--计算机总体大小-->
+		<div class="d_total">
+			<!--菜单-->
+			<div class="d_menu">
+				<input type="button" value="X" id="bt_cls" style="width: 30px; height: 28px;"/>
+			</div>
+			<!--显示面板-->
+			<div class="d_display">
+				<input type="text" id="txt1"/>
+			</div>
+			
+			<div class="d_buttom">
+				<!--数字按键-->
+				<div class="d_number">
+				<input type="button" value="7" onclick="add(this)"  id="bt7" style="width: 50px; height: 50px;"/>
+				<input type="button" value="8" onclick="add(this)"  id="bt8" style="width: 50px; height: 50px;"/>
+				<input type="button" value="9" onclick="add(this)"  id="bt9" style="width: 50px; height: 50px;"/>
+				<input type="button" value="4" onclick="add(this)"  id="bt4" style="width: 50px; height: 50px;"/>
+				<input type="button" value="5" onclick="add(this)"  id="bt5" style="width: 50px; height: 50px;"/>
+				<input type="button" value="6" onclick="add(this)"  id="bt6" style="width: 50px; height: 50px;"/>
+				<input type="button" value="1" onclick="add(this)"  id="bt1" style="width: 50px; height: 50px;"/>
+				<input type="button" value="2" onclick="add(this)"  id="bt2" style="width: 50px; height: 50px;"/>
+				<input type="button" value="3" onclick="add(this)"  id="bt3" style="width: 50px; height: 50px;"/>
+			</div>
+			<!--符号按键-->
+			<div class="d_sign">
+				<input type="button" value="C" onclick="clears(this)"  id="bt_clr" style="width: 50px; height: 60px;"/>
+				<input type="button" value="x" onclick="add(this)"  id="bt_mul" style="width: 50px; height: 60px;"/>
+				<input type="button" value="+" onclick="add(this)" id="bt_add" style="width: 50px; height: 60px;"/>
+				<input type="button" value="-" onclick="add(this)"  id="bt_de" style="width: 50px; height: 60px;"/>
+				<input type="button" value="/" onclick="add(this)"  id="bt_div" style="width: 50px; height: 60px;"/>
+				<input type="button" value="=" onclick="results(this)" id="bt_eql" style="width: 50px; height: 60px;"/>
+			</div>
+			<!--数字0按键-->
+			<div class="d_number0">
+					<input type="button" value="0" id="bt0" class="" style="width: 150px; height: 50px;"/>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

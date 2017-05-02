@@ -1,0 +1,119 @@
+*{margin:0px}
+
+
+.d1{height: 10px;background: #E8E8E8;}
+
+.d2{height:100px;background: #F6F6F6;}
+.d2_1{width: 1000px;height:100px;margin:0px auto}
+.d2_1 img{float:left;margin-top:16px}
+
+.d2_1 a{float:right;margin-top: 76px;
+		font-size: 12px;color:#d10003;
+		font-family: Arial;
+		text-decoration: none;
+		
+		}
+
+.d2_1 a:hover{text-decoration: underline;}
+
+
+
+
+.d3{height: 55px;background: #840E0E;}
+.d3_1{height: 55px;width: 1000px;margin: 0px auto;}
+.d3_1 ul{list-style: none;padding: 0px;}
+.d3_1 ul li{float:left;line-height: 55px;
+			border-left: 1px solid #5D0D0C;
+			}
+		
+.d3_1 ul li a{text-decoration: none;color:#ffffff;
+		font-family: arial,"微软雅黑";
+		font-size: 18px;
+		text-align: center;
+		display: block;
+		padding: 0px 14px;}
+		
+.d3_1 li:hover{background: #5D0D0C;}
+.d3_1 ul:after{content: "";display: block;clear: both;}
+
+
+.d4{height: 468px;background-image:url(img/silder_bg.jpg);}
+.d4_1{height: 468px;margin: 0px auto;width:1000px;
+		position: relative;}
+.d4_1 img{position: absolute;}
+.d4_2{bottom:20px;
+		position: absolute;width:1000px;text-align: center;}
+
+.d4_2 span{width: 10px;height: 10px;
+		background: white;
+		display: inline-block;
+		margin-right: 10px;
+		border-radius: 50%;
+		}
+
+.d4_2 .sp1{background: red;}
+.d4_2 span:hover{cursor: pointer;background: red;}
+
+
+
+
+.d5{background: #F6F6F6;padding:30px 0px}
+.d5_1{width: 1000px;margin: 0px auto;}
+.d5_1:after{content: "";display: block;clear: both;}
+.d5_left{float:left;width: 294px;
+	border-right:1px solid lightgray ;}
+.d5_left img{width: 260px;height: 456px;}	
+.d5_left p{color:#680c0b;font-size: 14px;font-family: arial;
+line-height: 22px;}	
+.d5_right{float:left;width:680px;margin-left: 25px;}
+.d5_right h3{border-bottom:3px solid #b9001b;
+			display:inline-block;color:#680c0b;
+			font-size: 20px;font-family: arial;
+			line-height: 40px;
+				}
+.d5_right div{border-bottom: 3px solid #decacd;height: 40px;}
+.d5_right p{color:#333333;font-size:14px;font-family: arial;
+			margin-top: 22px;line-height: 22px;}
+
+
+
+.d6{height: 132px;background: #F2F1EB;padding-top:30px ;border-top:1px solid #E5DED4}
+.d6_1{width: 1000px;height: 162px;margin: 0px auto;}
+.d6 ul{list-style: none;padding: 0px;width:900px}
+.d6 ul li{width: 400px;float:left;
+		color:#333333;font-size: 15px;
+		line-height: 30px;
+		font-family: arial;
+		background-repeat: no-repeat;
+		background-position: left center;
+		padding-left: 25px;
+		}
+
+.d6 .web{background-image: url(img/web_icon.png);
+		width: 300px;
+	}
+.d6 .fax{background-image: url(img/fax_icon.png);
+		width: 300px;
+	}
+
+.d6 .tel{background-image: url(img/tel_icon.png);
+		width: 300px;
+	}
+.d6 .post{background-image: url(img/past_icon.png);
+		
+	}
+.d6 .add{background-image: url(img/address_icon.png);
+	
+	}
+.d6 .email{background-image: url(img/email_icon.png);
+		
+	}
+.d6 ul:after{clear: both;content: "";display: block;}
+
+
+
+.d7{height: 100px;background: #680c0b;
+border-top:10px solid black;
+line-height: 100px;text-align: center;
+color:#ffffff;font-family: arial;font-size: 12px;
+}

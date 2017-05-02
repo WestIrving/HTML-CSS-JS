@@ -1,0 +1,55 @@
+.d_total{
+				width:300px;
+				height: 282px;
+				padding: 0px;
+				margin-top: 200px;
+				margin-left: 200px;
+				border: 3px solid black;
+				background: #A8C1DD;
+			}
+			.d_menu input{
+				display: block;
+				float: right;
+			}
+			.d_display{
+				width: 100%;
+				height: 50px;
+				padding: 0px;
+				display: block;
+			}
+			#txt1{
+				height: 200px;
+				height: 40px;
+				font-size: 20px;
+				border: 2px solid black;
+			}
+			.d_number{
+				margin-top: 30px;
+				width: 150px;
+				display: block;
+				float: left;
+				
+			}
+			.d_number input{
+				display: block;
+				float: left;
+				
+			}
+			
+			.d_sign{
+				padding: 0px;
+				width: 130px;
+				display: block;
+				float: right;
+				margin-top: 50px;
+			}
+			.d_number0{
+				width: 50px;
+				margin-top: 10px;
+				display: block;
+				float: left;
+				border: 1px solid gray;
+				margin-top: 0px;
+			}
+			.d_sign input{
+			}
