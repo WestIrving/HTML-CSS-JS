@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function(){
+				
+				
+				
+				var bt1 = document.getElementById("bt1");
+				var d1 = document.getElementById("d1");
+				var bt3=document.getElementById("bt3");
+				var bt4=document.getElementById("bt4");
+				bt1.onclick = function(){
+					startMove(d1,0);
+				}
+				var bt2 = document.getElementById("bt2");
+				bt2.onclick = function(){
+					startMove(d1,300);
+				}
+				bt3.onclick = function(){
+					startupMove(d1,277);
+				}
+				bt4.onclick = function(){
+					startupMove(d1,0);
+				}
+			}
+			var timer = null;
+			function startMove(obj,target){
+					clearInterval(timer);
+					timer = setInterval(function(){
+						var left = obj.offsetLeft;
+						var speed = (target - left)/7;
+						speed = speed  > 0 ? Math.ceil(speed):Math.floor(speed);
+						if(left == target){
+							clearInterval(timer);
+						}
+						obj.style.left=left+speed +"px";
+					},10);
+			}
+			function startupMove(obj,target){
+					clearInterval(timer);
+					    timer=setInterval(function(){
+						var Top=d1.offsetTop;
+						var Left=d1.offsetLeft;
+						var speed=(target-Top)/7;
+						if(Top==300&&left==300){
+							clearInterval(timer);
+						}
+						d1.style.top=Top+speed+"px";
+					},10);
+			}
+			
+			
+		</script>
+		<style>
+			.d1{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				position: absolute;
+				left:0px
+			}
+			.d1:hover{
+				background: yellow;
+			}
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<input type="button" value="向左运动" id="bt1"/>
+		<input type="button" value="向右运动" id="bt2"/>
+		<input type="button" id="bt3" value="向下运动" />
+		<input type="button" id="bt4" value="向上运动" />
+		<div id="d1" class="d1"></div>
+	</body>
+</html>

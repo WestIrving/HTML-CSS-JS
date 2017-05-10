@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//json对象
+			var citys = {
+				"sx1" : ["西安市","宝鸡市","铜川市","咸阳市","安康市"],
+				"sd1" : ["青岛市","烟台市","大连市"],
+				"sx2" : ["太原市","大同市","阳泉市"]
+			};
+			window.onload = function(){
+				
+				var pro = document.getElementById("pro");
+				var city = document.getElementById("city");
+				//给pro绑定onchange改变事件
+				pro.onchange = function(){
+					//获取当前元素下所有子元素(sx1,sd1,sx2)
+					var child = city.children;
+					
+					while(child.length>0){
+						city.removeChild(child[0]);
+					}
+					var vs = citys[this.value];
+					for(var i=0;i<vs.length;i++){
+						var op = document.createElement("option");
+						op.innerText = vs[i];
+						city.appendChild(op);
+					}
+					
+				}
+				
+			}
+			
+			
+			
+		</script>
+		
+		
+		
+	</head>
+	<body>
+		<select id="pro">
+			<option value="sx1">陕西省</option>
+			<option value="sx2">山西省</option>
+			<option value="sd1">山东省</option>
+		</select>
+		<select id="city">
+		</select>
+	</body>
+</html>

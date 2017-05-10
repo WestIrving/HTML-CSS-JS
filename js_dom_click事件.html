@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			window.onload = function(){
+				var color=#b2b2b2;
+				var bt = document.getElementById("bt");
+				bt.onclick = function(){
+					var ip = document.getElementById("ip");
+					ip.value = bt.value;
+					sp1.background=color;
+				}
+				sp1.onclick = function(){
+					
+				}
+				
+			}
+			
+		</script>
+		<style>
+			.d1{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<input type="text" value="0" id="ip"/>
+		<input type="button" value="ss" id="bt" />
+		<div class="d1">
+			<span id="sp1"><a href="#">haha</a></span>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			window.onload=function(){
+				var ck=document.getElementById("ck");
+				var ips=document.getElementsByTagName("input");
+				ck.onclick=function(){
+					
+					for(var i=0;i<ips.length;i++){
+						ips[i].checked=this.checked;
+					}
+				}
+				
+				for(var i=1;i<ips.length;i++){
+					
+					//用循环给每一个input绑定监听
+					ips[i].onclick=function(){
+						
+						if(this.checked){
+							var b=true;
+							for(var j=1;j<ips.length;j++){
+								
+								if(!ips[j].checked){
+									b=false;
+								}
+							}
+							
+							ck.checked=b;
+						}else{
+							ck.checked=true;
+						}
+					}
+				}
+			}
+			
+			
+			
+		</script>
+		
+	</head>
+	<body>
+			<input type="checkbox"  id="ck"/>全选/全不选<br />
+			<input type="checkbox"/>第一个<br />
+			<input type="checkbox"/>第二个<br />
+			<input type="checkbox"/>第三个<br />
+			<input type="checkbox"/>第四个<br />
+			<input type="checkbox"/>第五个<br />
+			<input type="checkbox"/>第六个<br />
+			<input type="checkbox"/>第七个<br />
+			<input type="checkbox"/>第八个<br />
+	</body>
+</html>

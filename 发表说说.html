@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			window.onload =function(){
+				
+				var bt=document.getElementById("bt");
+				var ip=document.getElementById("ip");
+				bt.onclick=function(){
+					
+					
+					//通过指定标签名来创建新标签对象
+					var nli=document.createElement("li");
+					//将ip的值设置给nli
+					nli.innerText=ip.value;
+					
+					var uu=document.getElementById("uu");
+					//将指定新标签追加到当前元素下
+					uu.appendChild(nli)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text"  id="ip"/>
+		<input type="button"  id="bt" value="发表"/>
+		<ul id="uu">
+			<li>123456</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				var im=document.getElementById("im");
+				var i=1;
+				im.onmouseover=function(){
+					var a=i++%9;
+					if(a==0){
+						a=1;
+					}
+					this.src="img/"+a+".png";
+					this.style.width="200px";
+					this.style.height="200px";
+				}
+				im.onmouseout=function(){
+					this.style.width="100px";
+					this.style.height="100px";
+				}
+			}
+		</script>
+		
+		<style>
+			#im{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/1.png" id="im"/>
+	</body>
+</html>
