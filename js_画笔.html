@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function(){
+				
+				document.documentElement.onmousedown = function(){
+					
+					document.documentElement.onmousemove = function(ev){
+						var div = document.createElement("div");
+						div.style.left = ev.clientX+"px";
+						div.style.top = ev.clientY+"px";
+						
+						document.body.appendChild(div);
+					}
+				}
+				document.documentElement.onmouseup = function(){
+					this.onmousemove = null;
+				}
+				
+				
+			}
+			
+		</script>
+		<style>
+			div{width: 2px;height: 2px;background: red;position: absolute;}	
+		</style>
+	</head>
+	<body>
+		
+	</body>
+</html>

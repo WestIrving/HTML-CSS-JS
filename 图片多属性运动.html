@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function(){
+				
+				var bt = document.getElementById("bt");
+				var d1 = document.getElementById("d1");
+				bt.onclick = function(){
+					startMove(d1,{width:400,height:400});
+				}
+			}
+			
+			var timer = null;
+			function startMove(obj,params){
+				clearInterval(timer);
+					timer = setInterval(function(){
+						var flag = true;
+						for(var attr in params){
+							var target = params[attr];
+							var bAttr = attr.substring(0,1).toUpperCase()
+									+attr.substring(1);
+							var w = obj["offset"+bAttr];
+							var speed = (target - w)/7;
+							speed = speed  > 0 ? Math.ceil(speed):Math.floor(speed);
+							if(w != target){
+								flag = false;
+							}
+							obj.style[attr]=w+speed +"px";
+						}
+						
+						if(flag == true){
+							clearInterval(timer);
+						}
+						
+					},10);
+			}
+			
+			
+		</script>
+		<style>
+			#d1{width: 200px;height: 200px;background: red;}
+			
+		</style>
+	</head>
+	<body>
+		<input type="button" value="开始" id="bt"/>
+		<div id="d1">
+			
+		</div>
+		
+	</body>
+</html>
